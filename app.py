@@ -190,18 +190,8 @@ paths and generate a personalized acceleration roadmap.
 
 st.divider()
 
-with st.sidebar:
-
-    st.header("🔐 Gemini Configuration")
-
-    api_key = st.text_input(
-        "Enter Gemini API Key",
-        type="password"
-    )
-
-    st.caption(
-        "Your API key is used only during this session."
-    )
+# Gemini API key loaded securely from Streamlit Secrets
+api_key = st.secrets["GEMINI_API_KEY"]
 
 
 st.header("👤 Student Profile")
